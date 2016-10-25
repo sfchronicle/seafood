@@ -59,7 +59,7 @@ function activate() {
   var div_top = document.getElementById('stick-here-fish').getBoundingClientRect().top + window_top;
   if ((window_top > div_top) && (window_top < sticker_stop)) {
     sticker.classList.add('fixed-fish');
-    sticker_ph.style.height = '131px'; 
+    sticker_ph.style.height = '131px';
     sticker_ph.style.display = 'block'; // puts in a placeholder for where sticky used to be for smooth scrolling
   } else {
     sticker.classList.remove('fixed-fish');
@@ -86,6 +86,8 @@ sec.addEventListener('click', function (event) {
 
   var sticker = document.getElementById('stick-me-fish');
   sticker.classList.remove('fixed-fish');
+  var sticker_ph = document.getElementById('stick-ph-fish');
+  sticker_ph.style.display = 'none';
 
   if (screen.width <= 480) {
     var targetOffset = document.getElementById("stick-here-fish").offsetTop-30;
