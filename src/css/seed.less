@@ -494,6 +494,9 @@ header {
 .graphic {
   .interactive-credit {
     padding: 10px 0;
+    @media @mobile {
+      padding: 10px;
+    }
   }
   .entry.padded {
     padding-top: 10px;
@@ -841,6 +844,8 @@ header {
 // photo gallery styles --------------------------------------------------------
 
 .photo-gallery {
+  max-width: 900px;
+  margin: 20px auto;
   background-color: white;
   position: relative;
   margin: 30px auto;
@@ -854,7 +859,7 @@ header {
       width: 100%;
     }
     @media @mobile {
-      width: 100%;
+      width: 80%;
     }
     margin: auto;
     &.active {
