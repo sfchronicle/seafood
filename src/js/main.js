@@ -20,20 +20,22 @@ fishlinks.addEventListener("click", function(e) {
     var previously = selected.querySelector(".fish-container");
     var previousImage = previously.querySelector(".fish");
     var previousImageIMG = previousImage.querySelector("img");
-    var newIMG = previousImageIMG.src.split("/")[5];
+    console.log(previousImageIMG.src);
+    var newIMG = previousImageIMG.src.split("/")[7];
     console.log(newIMG);
     console.log(newIMG.substring(0,5));
     if (newIMG.substring(0,5) != "white") {
       var img = document.createElement("img");
-      img.src = "../assets/graphics/white"+newIMG;
+      img.src = "./assets/graphics/white"+newIMG;
       previousImage.replaceChild(img, previousImageIMG);
     }
     var image = item.querySelector(".fish");
     var imageIMG = image.querySelector("img");
-    var bigimage = imageIMG.src.split("/")[5];
+    var bigimage = imageIMG.src.split("/")[7];
+    console.log(bigimage);
     if (bigimage.substring(0,5) == "white") {
       var img = document.createElement("img");
-      img.src = "../assets/graphics/" + bigimage.substring(5,bigimage.length);
+      img.src = "./assets/graphics/" + bigimage.substring(5,bigimage.length);
       image.replaceChild(img, imageIMG);
     }
     flip(image, function() {
