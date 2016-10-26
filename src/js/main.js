@@ -121,3 +121,80 @@ sec.addEventListener('click', function (event) {
   event.preventDefault();
 
 }, false);
+
+// photo gallery ---------------------------------------------------------------
+
+// templates for the two interactives
+var slideshow_template = dot.compile(require("../partials/_slideshow.html"));
+
+var photo1 = {
+  url: "http://ww2.hdnux.com/photos/54/11/64/11622639/3/2000x1000.jpg",
+  caption: "People fill the sidewalk outside the Pier 23 restaurant and bar on the Embarcadero. ",
+  credit: "Michael Macor"
+};
+var photo2 = {
+  url: "http://ww2.hdnux.com/photos/54/11/64/11622618/3/2000x1000.jpg",
+  caption: "The seawall along the Embarcadero is covered in algae and could fail in a major earthquake. ",
+  credit: "Michael Macor"
+};
+var photo3 = {
+  url: "http://ww2.hdnux.com/photos/54/11/64/11622730/3/2000x1000.jpg",
+  caption: "People passing by at Pier 26 along the Embarcadero. ",
+  credit: "Michael Macor"
+};
+var photo4 = {
+  url: "http://ww2.hdnux.com/photos/54/11/64/11622727/3/2000x1000.jpg",
+  caption: "People fill the sidewalk outside the Pier 23 restaurant and bar on the Embarcadero. ",
+  credit: "Michael Macor"
+};
+var photo5 = {
+  url: "http://ww2.hdnux.com/photos/54/11/64/11622645/3/2000x1000.jpg",
+  caption: "The seawall along the Embarcadero is covered in algae and could fail in a major earthquake. ",
+  credit: "Michael Macor"
+};
+var photo6 = {
+  url: "http://ww2.hdnux.com/photos/54/11/64/11622649/3/2000x1000.jpg",
+  caption: "People passing by at Pier 26 along the Embarcadero. ",
+  credit: "Michael Macor"
+};
+
+document.querySelector("#photo_g10").innerHTML = slideshow_template(photo1);
+document.querySelector("#photo_g11").innerHTML = slideshow_template(photo2);
+document.querySelector("#photo_g12").innerHTML = slideshow_template(photo3);
+document.querySelector("#photo_g13").innerHTML = slideshow_template(photo4);
+document.querySelector("#photo_g14").innerHTML = slideshow_template(photo5);
+document.querySelector("#photo_g15").innerHTML = slideshow_template(photo6);
+
+// photo gallery #4
+var gallery_idx = 0;
+// set up clicking to update map interactive on mobile
+document.getElementById("scroll-right-gallery").addEventListener("click", function() {
+  gallery_idx = gallery_idx+1;
+  $(".photo_g1").removeClass("active");
+  $("#photo_g1"+gallery_idx).addClass("active");
+  if (gallery_idx == 5) {
+    $("#scroll-right-gallery").addClass("last");
+  } else {
+    $("#scroll-right-gallery").removeClass("last");
+  };
+  if (gallery_idx == 0) {
+    $("#scroll-left-gallery").addClass("first");
+  } else {
+    $("#scroll-left-gallery").removeClass("first");
+  };
+});
+document.getElementById("scroll-left-gallery").addEventListener("click", function() {
+  gallery_idx = gallery_idx-1;
+  $(".photo_g1").removeClass("active");
+  $("#photo_g1"+gallery_idx).addClass("active");
+  if (gallery_idx == 5) {
+    $("#scroll-right-gallery").addClass("last");
+  } else {
+    $("#scroll-right-gallery").removeClass("last");
+  };
+  if (gallery_idx == 0) {
+    $("#scroll-left-gallery").addClass("first");
+  } else {
+    $("#scroll-left-gallery").removeClass("first");
+  };
+});
