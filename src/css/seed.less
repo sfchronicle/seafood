@@ -300,6 +300,7 @@ footer {
 .fixed {
   position: fixed;
   top: 0;
+  // width: inherit;
   width: 100%;
   z-index: 99;
   left: 0;
@@ -586,9 +587,6 @@ header {
   .fish-container {
     margin: auto;
     .flex(0 0 18%);
-    @media @mobile {
-      .flex(0 0 33%);
-    }
   }
   .fish {
     clear: both;
@@ -609,14 +607,15 @@ header {
     img {
       width: 300px;
       @media @mobile {
-        width: 80%;
+        width: 130px;
       }
     }
   }
   float: right;
   padding: 40px;
   @media @mobile {
-    padding: 10px;
+    text-align: center;
+    padding: 20px;
   }
   vertical-align: center;
 }
@@ -692,7 +691,7 @@ header {
     padding: 10px 20px;
   }
   @media @mobile {
-    padding: 20px 0;
+    padding: 20px 10px;
   }
   &.padded {
     padding-bottom: 40px;
@@ -741,6 +740,10 @@ header {
   @media @mobile {
     padding-top: 20px;
   }
+  @media @tablet {
+    width: 100%;
+    margin: 50px 0 !important;
+  }
 }
 
 .fixed-fish {
@@ -777,9 +780,11 @@ header {
   width: 800px;
   margin: auto;
   @media @tablet {
+    width: 90%;
     font-size: 18px;
   }
   @media @mobile {
+    width: 95%;
     padding: 0 10px;
   }
 }

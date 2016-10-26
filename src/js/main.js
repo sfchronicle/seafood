@@ -4,6 +4,10 @@ var dot = require("./lib/dot");
 var flip = require("./lib/flip");
 var closest = require("./lib/closest");
 
+window.addEventListener("orientationchange", function() {
+  window.location.reload();
+}, false);
+
 var fish_template = dot.compile(require("../partials/_fish_info.html"));
 document.querySelector(".fish-info").innerHTML = fish_template(fishData["crab"]);
 
@@ -58,6 +62,7 @@ function activate() {
   var sticker_stop = document.getElementById('stop-stick-here').getBoundingClientRect().top + window_top - 100;
   var div_top = document.getElementById('stick-here-fish').getBoundingClientRect().top + window_top;
   if ((window_top > div_top) && (window_top < sticker_stop)) {
+    console.log("scrolling");
     sticker.classList.add('fixed-fish');
     sticker_ph.style.height = '131px';
     sticker_ph.style.display = 'block'; // puts in a placeholder for where sticky used to be for smooth scrolling
@@ -90,7 +95,7 @@ sec.addEventListener('click', function (event) {
   sticker_ph.style.display = 'none';
 
   if (screen.width <= 480) {
-    var targetOffset = document.getElementById("stick-here-fish").offsetTop-30;
+    var targetOffset = document.getElementById("stick-here-fish").offsetTop-20;
   } else {
     var targetOffset = document.getElementById("stick-here-fish").offsetTop-200;
   }
