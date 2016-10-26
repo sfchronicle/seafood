@@ -51,6 +51,22 @@ hr{
   width: 75%;
 }
 
+.fish-info {
+  hr{
+    margin: 1em auto;
+    border: none;
+    width: 75%;
+    // @media @mobile {
+    //   margin: 1em auto
+    // }
+  }
+  .graphic-permit, .season {
+    font-style: italic;
+    font-family: @block-graphics;
+    font-size: 16px;
+  }
+}
+
 .max{
   max-width:900px;
   margin:0 auto;
@@ -405,6 +421,7 @@ header {
   padding: 0;
   max-width: 100%;
   &.landing {
+    padding-left: 10px;
     margin-bottom: 2.5em;
   }
 }
@@ -813,7 +830,7 @@ header {
 .insert-text {
   color: red;
   font-family: @bold-graphics;
-  font-size: 40px;
+  font-size: 30px;
   text-align: center;
   padding: 50px;
   width: 900px;

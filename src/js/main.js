@@ -129,33 +129,33 @@ var slideshow_template = dot.compile(require("../partials/_slideshow.html"));
 
 var photo1 = {
   url: "http://ww2.hdnux.com/photos/54/11/64/11622639/3/2000x1000.jpg",
-  caption: "People fill the sidewalk outside the Pier 23 restaurant and bar on the Embarcadero. ",
-  credit: "Michael Macor"
+  caption: "Insert caption here. ",
+  credit: "Gabrielle Lurie"
 };
 var photo2 = {
   url: "http://ww2.hdnux.com/photos/54/11/64/11622618/3/2000x1000.jpg",
-  caption: "The seawall along the Embarcadero is covered in algae and could fail in a major earthquake. ",
-  credit: "Michael Macor"
+  caption: "Insert caption here. ",
+  credit: "Gabrielle Lurie"
 };
 var photo3 = {
   url: "http://ww2.hdnux.com/photos/54/11/64/11622730/3/2000x1000.jpg",
-  caption: "People passing by at Pier 26 along the Embarcadero. ",
-  credit: "Michael Macor"
+  caption: "Insert caption here. ",
+  credit: "Gabrielle Lurie"
 };
 var photo4 = {
   url: "http://ww2.hdnux.com/photos/54/11/64/11622727/3/2000x1000.jpg",
-  caption: "People fill the sidewalk outside the Pier 23 restaurant and bar on the Embarcadero. ",
-  credit: "Michael Macor"
+  caption: "Insert caption here. ",
+  credit: "Gabrielle Lurie"
 };
 var photo5 = {
   url: "http://ww2.hdnux.com/photos/54/11/64/11622645/3/2000x1000.jpg",
-  caption: "The seawall along the Embarcadero is covered in algae and could fail in a major earthquake. ",
-  credit: "Michael Macor"
+  caption: "Insert caption here. ",
+  credit: "Gabrielle Lurie"
 };
 var photo6 = {
   url: "http://ww2.hdnux.com/photos/54/11/64/11622649/3/2000x1000.jpg",
-  caption: "People passing by at Pier 26 along the Embarcadero. ",
-  credit: "Michael Macor"
+  caption: "Insert caption here. ",
+  credit: "Gabrielle Lurie"
 };
 
 document.querySelector("#photo_g10").innerHTML = slideshow_template(photo1);
