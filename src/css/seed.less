@@ -584,7 +584,9 @@ header {
   max-width: 900px;
   .display-flex;
   .flex-wrap(wrap);
-  background-color: darken(@sea-blue,10%);
+  background-image: url("../assets/graphics/fishbackground.png");
+  background-position: right;
+  // background-color: darken(@sea-blue,10%);
   // border: 1px solid @light-gray;
   justify-content: center;
   .fish-container {
@@ -631,7 +633,7 @@ header {
 }
 
 .fish-container, .active-fish, .fish {
-  transition: margin-left 4s;
+  transition: all ease margin-left 4s;
 }
 
 // .active-fish {

@@ -24,14 +24,18 @@ fishlinks.addEventListener("click", function(e) {
     console.log(newIMG);
     console.log(newIMG.substring(0,5));
     if (newIMG.substring(0,5) != "white") {
-      console.log("swapping image");
       var img = document.createElement("img");
       img.src = "../assets/graphics/white"+newIMG;
-      console.log(img.src);
-      img.src = "../assets/graphics/sardines_GR.png";
       previousImage.replaceChild(img, previousImageIMG);
     }
     var image = item.querySelector(".fish");
+    var imageIMG = image.querySelector("img");
+    var bigimage = imageIMG.src.split("/")[5];
+    if (bigimage.substring(0,5) == "white") {
+      var img = document.createElement("img");
+      img.src = "../assets/graphics/" + bigimage.substring(5,bigimage.length);
+      image.replaceChild(img, imageIMG);
+    }
     flip(image, function() {
       selected.removeChild(previously);
       previously.classList.add("wiggle-even");
