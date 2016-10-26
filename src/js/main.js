@@ -62,7 +62,6 @@ function activate() {
   var sticker_stop = document.getElementById('stop-stick-here').getBoundingClientRect().top + window_top - 100;
   var div_top = document.getElementById('stick-here-fish').getBoundingClientRect().top + window_top;
   if ((window_top > div_top) && (window_top < sticker_stop)) {
-    console.log("scrolling");
     sticker.classList.add('fixed-fish');
     sticker_ph.style.height = '131px';
     sticker_ph.style.display = 'block'; // puts in a placeholder for where sticky used to be for smooth scrolling
