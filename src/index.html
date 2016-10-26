@@ -4,13 +4,20 @@
     <title><%= json.project.title %></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="__sync_contentCategory" content="meterA">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <script src="http://projects.sfchronicle.com/shared/js/jquery.min.js"></script>
+
+    <script type="text/javascript" src="http://treg.hearstnp.com/treg.js"></script>
+    <script type="text/javascript" src="http://www.sfchronicle.com/js/hdn/omniture/syncronex.js"></script>
+    <script type="text/javascript" src="https://syncaccess-hst-sfc.syncronex.com/hst/sfc/api/scripts/syncwall"></script>
+
     <%= t.include("partials/_head.html") %>
     <%= t.include("partials/_analytics.html") %>
   </head>
-  <script>  var HDN = HDN || {}  </script>
 
   <body>
 
@@ -31,23 +38,33 @@
   </div>
   <p class="caption landing">Roland Baham of Oakland tries his luck off the eastern shoreline of Treasure Island in San Francisco, which is being transformed with an eye to sea level rise. <span class="byline"> Michael Macor, The Chronicle</span></p>
 
-
-    <p>The California coast is part of one of the most productive fisheries in the world. Thanks to its particular north-south orientation with the ocean on its eastern side, winds that run southward down the West Coast push surface water offshore, allowing deeper nutrient-rich water to come up and feed seaweed and phytoplankton. That sets the food chain in motion for zooplankton, small fish, large fish and on up to marine mammals and fish-eating humans.</p>
-
-    <div class="inline-img">
-      <div style="position: relative; padding-bottom: 56.25%; height: 0px;"><iframe src="//player.hearstdigitalstudios.com/580fa96be694aa429b2233a4?width=100%25&autostart=0&aratio=16:9&duration=&cc%5B%5D=" frameborder="0" allowfullscreen="true" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;"></iframe></div>
-    </div>
-
-    <p>That same incredibly rich ecosystem has experienced a profound set of disruptions lately, mostly in the form of warmer water temperatures, sending the Northern California seafood industry into crisis mode. The Dungeness crab fishery suffered a historic delay last year; Chinook salmon are unable to return to the ocean from their river spawning grounds thanks to the drought; sea urchin are starving without enough kelp to eat; farmed oysters are threatened by ocean acidification; and squid and sardines are showing up in completely unusual places with diminished populations.</p>
-
-    <p>Is this the new normal?</p>
-
     <div class="container">
 
-      <!-- <%= t.include("partials/_text.html") %> -->
+      <p>In the shallow waters off Elk, in Mendocino County, a crew from the California Department of Fish and Wildlife dived recently to survey the area’s urchin and abalone populations. Instead of slipping beneath a canopy of leafy bull kelp, which normally darkens the ocean floor like a forest, they found a barren landscape like something out of “The Lorax.”</p>
+
+      <p>A single large abalone scaled a bare kelp stalk, hunting a scrap to eat, while urchins clustered atop stark gray stone that is normally striped in colorful seaweed.</p>
+
+      <p>“When the urchins are starving and are desperate, they will the leave the reef as bare rock,” said Cynthia Catton, an environmental scientist with Fish and Wildlife. Warm seawater has prevented the growth of kelp, the invertebrates’ main food source, so the urchins aren’t developing normally; the spiky shells of many are nearly empty. As a result, North Coast sea urchin divers have brought in only one-tenth of their normal haul this year.</p>
+
+      <p>The plight of urchins, abalones and the kelp forest is just one example of an extensive ongoing disruption of California’s coastal ecosystem — and the fisheries that depend on it — after several years of unusually warm ocean conditions and drought. Earlier this month, The Chronicle <a href="http://www.sfchronicle.com/news/article/SF-Bay-ecosystem-collapsing-as-rivers-diverted-9953776.php">reported</a> that scientists have discovered evidence in San Francisco Bay and its estuary of what is being called the planet’s sixth mass extinction, affecting species including chinook salmon and delta smelt.</p>
+
+      <div class="float-img-container">
+        <div class="float-img right">
+          <img src="http://ww2.hdnux.com/photos/54/11/64/11623675/3/2000x1000.jpg"></img>
+          <div class="caption">caption caption. <span class="byline">Michael Macor, The Chronicle</span></div>
+        </div>
+      </div>
+
+      <p>Baby salmon are dying by the millions in drought-warmed rivers while en route to the ocean. Young oysters are being deformed or killed by ocean acidification. The Pacific sardine population has crashed, and both sardines and squid are migrating to unusual new places. And Dungeness crab was devastated last year by an unprecedented toxic algal bloom that delayed the opening of its season for four months.</p>
+
+      <p>The collapses are taking a financial toll on the state’s seafood industry. A report from the National Oceanic and Atmospheric Administration released Wednesday showed the California fishing harvest decreased in value by $109 million between 2014 and 2015, or a 43 percent decrease.<p>
+
+      <p>The impact has already been felt in Bay Area homes. This summer, chinook salmon sold for more than $35 per pound in some markets, about 50 percent higher than in previous years. The absence of Dungeness crab during the 2015 holiday season jarred many locals, though, so far, the outlook is good that the Bay Area’s favorite crustacean will return to holiday tables when the season starts in mid-November.</p>
+
+      <p>More disturbing are signs that the recent changes to the Pacific Ocean could represent the new normal.</p>
 
       <div class="outer">
-        <div class="hed">Six seafood species in the bay area</div>
+        <div class="hed">Six impacted seafood species in the Bay Area</div>
         <div class="chatter">Here is a look at how six seafood species were impacted by recent unusual weather patterns and what we can expect in the future. Click on the images below to discover more about each.</div>
 
         <div id="stick-here-fish"></div>
@@ -81,81 +98,86 @@
           <div class="entry">Emma O'Neill  &bull; <a href="mailto:eoneill@sfchronicle.com">eoneill@sfchronicle.com</a>   &bull; <a href = "https://twitter.com/emmaruthoneill" target="_blank">@emmaruthoneill</a></div>
           <div class="entry">John Blanchard  &bull; <a href="mailto:jblanchard@sfchronicle.com">jblanchard@sfchronicle.com</a></div>
         </div>
-    </div>
-
-    <p>The causes for the recent fishery disasters and near-disasters are complex but interrelated. The combination of last year’s El Niño and a persistent patch of warm water near Alaska that some scientists now call the North Pacific Marine Heat Wave — though it’s more popularly known as the Blob—caused toxic algae blooms to spike and species to migrate erratically.</p>
-
-    <p>“Temperature really impacts the growth of many of these species. They’ve evolved in a very specific temperature range and suddenly that’s getting out of whack,” says Toby Garfield, director of the Environmental Research Division at the NOAA Southwest Fisheries Science Lab. “It’s really impacting their growth and development in ways that we’re just beginning to understand.”</p>
-
-    <div class="float-img-container">
-      <div class="float-img left">
-        <img src="http://ww2.hdnux.com/photos/54/11/64/11623675/3/2000x1000.jpg"></img>
-        <div class="caption">caption caption. <span class="byline">Michael Macor, The Chronicle</span></div>
       </div>
-    </div>
 
-    <p>There’s no proof that global warming was the cause of the Marine Heat Wave, Garfield says, but it’s definitely behind the ocean acidification that is affecting oysters and threatens other shellfish populations. Some say it even helped maintain a ridge of high pressure over it that was a contributing factor in the five-year drought.</p>
+      <p>“Weather and climate are two very closely related things that are difficult to tease apart. What is short-term variable weather versus long-term climate change?” said Toby Garfield, director of the Environmental Research Division at San Diego’s National Oceanic and Atmospheric Administration Southwest Fisheries Science Lab. “Almost any scientist you talk to would say, ‘Yes, the climate is changing, and we’re seeing a lot of variability.’”</p>
 
-    <p>“Weather and climate are two very closely related things that are difficult to tease apart. What is short term variable weather versus long-term climate change?” said Garfield. “Almost any scientist you talk to would say, yes the climate is changing and we’re seeing a lot of variability...Most agencies are working very hard to understand what these changes are.”</p>
+      <p>But, Garfield added, “Most agencies are working very hard to understand what these changes are.”</p>
 
-    <p>The impact on our dinner plates has already been felt, in the high cost of Chinook salmon during summer barbecues and the loss of Dungeness crab during the holidays last year — though signs are positive that the Bay Area’s favorite crustacean will return to Thanksgiving celebrations this year.</p>
+      <p>Not hard to understand is the financial hit the state’s fisheries have taken. Last year’s Dungeness crab season, normally one of the most lucrative fisheries in the state, brought in $37 million, far less than the average $68 million over the previous five years. The chinook salmon harvest dropped by two-thirds between 2013 and 2015, cutting fishers’ earnings to $8 million from $22.7 million. Many in the industry think this year’s numbers will be worse.</p>
 
-    <p>The impact on fisheries has been even greater. When it finally opened, last year’s crab harvest was worth about half of the average of the previous five years, at $37 million. The Chinook salmon harvest dropped 68 percent between 2013 and 2015, and fishers think the 2016 numbers will probably be worse.</p>
+      <div class="inline-img">
+        <img src="http://ww2.hdnux.com/photos/54/11/64/11622649/3/2000x1000.jpg"></img>
+        <div class="caption">This is a caption. <span class="byline">Person Person, The Chronicle</span></div>
+      </div>
 
-    <div class="float-img-container">
-      <div class="float-img left graphic">
-        <img src="../assets/graphics/squidlandings_2000_2014_web2.gif">
-        <div class="interactive-credit">
-          <div class="entry">John Blanchard  &bull; <a href="mailto:jblanchard@sfchronicle.com">jblanchard@sfchronicle.com</a></div>
+      <p>The causes of these dramatic changes are complex and loosely interrelated. The combination of a strong El Niño weather pattern, which warmed ocean waters last year, and a persistent patch of warm water near Alaska, colloquially known as the Warm Blob, caused toxic algal blooms to spike and fish to migrate erratically.</p>
+
+      <p>The Blob — Garfield prefers “North Pacific Marine Heat Wave” — is a zone of atmospheric high pressure that diverts the winter storms that normally help cool down the ocean. While it first appeared in 2014 and is not influencing California coastal water temperatures the way it did last year, it’s still an unusual phenomenon that can be self-perpetuating. The Blob’s staying power and the gradual rise of global ocean temperatures fuel concerns that there could be an eventual repeat of last year’s crab disaster.</p>
+
+      <p>“Temperature really impacts the growth of many of these species. They’ve evolved in a very specific temperature range and suddenly that’s getting out of whack,” said Garfield. “It’s really impacting their growth and development in ways that we’re just beginning to understand.”</p>
+
+      <p>Sardines and squid, two hallmarks of local seafood, usually spawn off of California, but as warm water pushed them north last year, both sardines and squid laid eggs near Oregon and even Alaska. In 2015, almost 3 million pounds of squid were harvested off Oregon, which hadn’t seen a big catch since the 1980s. Meanwhile, California’s squid harvest, normally the largest in the country and worth $73 million, dropped by 64 percent between 2014 and 2015.</p>
+
+      <div class="insert-text">INSERT JOHN GRAPHIC ABOUT DECLINING POPULATIONS</div>
+
+      <p>Pacific sardines are in even greater decline. The population, which naturally fluctuates a great deal, is estimated at one-tenth of what it was in 2007, when the fishery was worth $8.2 million. Because of the decline, that fishery has been closed for the past two years, though the recent warm ocean temperatures have had an impact, too.</p>
+
+      <p>The overall situation is dire, so many scientists and fishers are taking aggressive steps to deal with the changes.</p>
+
+      <p>Hog Island Oyster Co. in Tomales Bay has been plagued by ocean acidification, caused as carbon is absorbed by the ocean — a result of climate change. This has limited the supply of seed stock the company needs to grow oysters.</p>
+
+      <div class="inline-img">
+        <img src="http://ww2.hdnux.com/photos/54/11/64/11622618/3/2000x1000.jpg"></img>
+        <div class="caption">This is a caption. <span class="byline">Person Person, The Chronicle</span></div>
+      </div>
+
+      <p>“To us what’s scary is not just the change in ocean chemistry, it’s the rate of change,” said co-owner John Finger.</p>
+
+      <p>Because the problem will only worsen as more carbon is absorbed, Hog Island is building a hatchery to produce its own seed and breed oysters that Finger hopes can better withstand acidification.</p>
+
+      <p>“Unless you have your head in the sand, you realize this is going to get drastically worse,” said Finger. “We need to have more seed production in various places because we don’t know what the patterns are for this.”</p>
+
+      <p>The Golden Gate Salmon Association has been trucking baby salmon to the ocean rather than risk the fish dying on the perilous trip from their birthplace in the Sacramento River down to San Francisco Bay. A new study from the Bay Institute concluded that so little water is flowing through the bay and its estuary — because of diversions for urban and Central Valley farm use — that some salmon and other native species are facing extinction. By some estimates, 80 percent of California’s native freshwater fish species could be gone by 2100.</p>
+
+      <div class="insert-text">INSERT JOHN GRAPHIC ABOUT SALMON</div>
+
+      <p>Salmon fishers and crabbers, meanwhile, are trying to adjust to the new seascape. Some are chartering their boats for recreational fishing while they wait for things to improve.</p>
+
+      <p>Somewhat ironically, with more squid moving north from its normal Southern California environs lately, Northern California has had some banner squid years. Earlier this month, Larry Collins of the San Francisco Community Fishing Association at Pier 45 had to show up at midnight several times to receive ton after ton of squid caught near the Farallon Islands or off Ocean Beach.</p>
+
+      <div class="float-img-container">
+        <div class="float-img left graphic">
+          <img src="../assets/graphics/squidlandings_2000_2014_web2.gif">
+          <div class="interactive-credit">
+            <div class="entry">John Blanchard  &bull; <a href="mailto:jblanchard@sfchronicle.com">jblanchard@sfchronicle.com</a></div>
+          </div>
         </div>
       </div>
-    </div>
 
-    <p>The state’s overall squid harvest dropped by 64 percent between 2014 and 2015 partly because of El Niño, though Northern California’s catch has been higher than usual after the warm waters pushed squid up the coast. Last year fishers brought almost 3 million pounds of squid into Oregon, which hadn’t happened since the 1980s, said Cyreis Schmitt at Oregon Department of Fish and Wildlife. Processors had to truck equipment up from California to handle the squid.</p>
+      <p>“There’s just miles of squid out there,” he said at the time.</p>
 
-    <p>Worst off are Pacific sardines and North Coast red sea urchin. In the first half of this year, Northern California’s red sea urchin harvest was only at one-tenth of what it was at the same time in 2013 and 2014 because of lack of kelp growth and competition with purple urchins. Fishery experts worry that divers who collect the spiny invertebrates by hand will give up altogether, now that the good ones are sparse.</p>
+      <p>The California coast is part of what is normally one of the most productive fisheries in the world. Winds that run southward down the West Coast push surface water offshore, allowing deeper, nutrient-rich water to come up and feed seaweed and phytoplankton. That sets the food chain in motion for zooplankton, including krill, which in turn nourish an incredibly diverse ecosystem of marine mammals and larger fish like the chinook.</p>
 
-    <div class="inline-img">
-      <img src="http://ww2.hdnux.com/photos/54/11/64/11622649/3/2000x1000.jpg"></img>
-      <div class="caption">This is a caption. <span class="byline">Person Person, The Chronicle</span></div>
-    </div>
+      <p>“Our salmon have some of the highest omega-3 content and best flavor of any salmon in the world,” said John McManus of the Golden Gate Salmon Association. “There’s a section of the population that recognizes that and is willing to pay for real, honest-to-god king salmon.”</p>
 
-    <p>The Pacific sardine population has also been literally decimated, at only one-tenth of what it was in 2007, when the fishery was worth $8.2 million. That has more to do with natural fluctuations in the stock. though recent warm water conditions caused both sardines and squid, which usually spawn off of California, laying eggs in Oregon and Alaska, respectively.</p>
+      <p>In an opinion page article in The Chronicle in August, Alice Waters of Chez Panisse and Patricia Unterman of Hayes Street Grill argued for better protection of chinook salmon and rebuilding of its runs, citing its importance in the region’s culture.</p>
 
-    <p>The Marine Heat Wave not only has been a heater for the ocean, it was in a zone of atmospheric high pressure that diverted storms. Since wind and waves regularly transfer heat from the ocean, fewer storms meant the ocean couldn’t stay cool. That created a feedback loop.</p>
+      <p>“Every year, the return of salmon is eagerly anticipated by California fishermen, restaurants and the public,” they wrote.</p>
 
-    <div class="float-img-container">
-      <div class="float-img right vertical">
-        <img src="http://ww2.hdnux.com/photos/54/11/64/11559395/3/2000x1000.jpg"></img>
-        <div class="caption">caption caption. <span class="byline">Michael Macor, The Chronicle</span></div>
+      <p>Catton, the Fish and Wildlife scientist, is concerned both about the sustainability of local marine species like salmon and urchin, and the entire state fishery. Urchin divers usually augment their income with crabbing and salmon fishing, but as those are no longer lucrative, many divers are working construction instead, she said.</p>
+
+      <p>“Many of them have weathered a lot of these good times and bad times,” she said. “They say it’s a cycle. Kelp comes and kelp goes.”</p>
+
+      <p>What’s different this time, she said, is the kelp forests have never been quite this bare.</p>
+
+    <div class="inline-img graphic">
+      <div style="position: relative; padding-bottom: 56.25%; height: 0px;"><iframe src="//player.hearstdigitalstudios.com/580fa96be694aa429b2233a4?width=100%25&autostart=0&aratio=16:9&duration=&cc%5B%5D=" frameborder="0" allowfullscreen="true" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;"></iframe></div>
+      <div class="interactive-credit">
+        <div class="entry">Underwater video taken at Van Damme State Park (Mendocino County) in August 2016 shows bare rock reef where there should be lots of bull kelp and other seaweed growing, which normally feed abalone and red sea urchin. Warm ocean temperatures and an invasion of purple sea urchin have decimated the kelp forest, leaving the abalone and red urchin starving.</div>
+        <div class="entry padded">Video: Athena Maguire, California Department of Fish and Wildlife.</div>
       </div>
     </div>
-
-    <p>Less wind also means not as much upwelling and fewer food sources for shellfish, like urchin and algae, and other marine animals.</p>
-
-    <p>Scientists thought the Marine Heat Wave had gone away, but it reappeared last month of the coast of Alaska. So far, it’s not influencing ocean temperatures in our area as much as it did in 2014 and 2015, when they were 8 to 10 degrees warmer than usual. While ocean temperatures were higher over the summer, they have cooled back to mostly normal.</p>
-
-    <p>Garfield said the things to watch for now with the Marine Heat Wave is how much area it covers, how deep it goes underwater and how close to shore it is.</p>
-
-    <div class="float-img-container">
-      <div class="float-img left">
-        <img src="http://ww2.hdnux.com/photos/54/11/64/11559651/3/2000x1000.jpg"></img>
-        <div class="caption">caption caption. <span class="byline">Michael Macor, The Chronicle</span></div>
-      </div>
-    </div>
-
-    <p>Though the changes to the ocean have been unnerving and costly, there are reasons to look up. In addition to cautious optimism from the California Department of Fish and Wildlife that we’ll have a safe and normal Dungeness crab season, salmon may rebound next spring because of last year’s mildly wet winter — and because organizations like Golden Gate Salmon Association have made efforts like trucking baby salmon to the ocean.</p>
-
-    <p>Others in the fishery are taking proactive steps, such as Hog Island Oyster Co., which is opening its own hatchery in Humboldt Bay in the hopes of being better prepared for ocean acidification caused by carbon emissions.</p>
-
-    <div class="inline-img">
-      <img src="http://ww2.hdnux.com/photos/54/11/64/11622618/3/2000x1000.jpg"></img>
-      <div class="caption">This is a caption. <span class="byline">Person Person, The Chronicle</span></div>
-    </div>
-
-    <p>The real question remains, is this the new normal? The average ocean temperature has risen 3 degrees over 30 years.</p>
-
-    <p>“It doesn’t sound like a lot but 3 degrees of energy in the ocean is still a lot of energy stored,” said Garfield. “Basically what you’re doing is putting more energy into the ocean and the atmosphere, (so) you can expect changes in weather and changes in ocean circulation.”</p>
 
     <div class="max">
       <hr>

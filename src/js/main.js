@@ -1,4 +1,4 @@
-require("component-responsive-frame/child");
+// require("component-responsive-frame/child");
 var social = require("./lib/social");
 var dot = require("./lib/dot");
 var flip = require("./lib/flip");

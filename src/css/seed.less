@@ -474,6 +474,15 @@ header {
   margin: 0 auto;
 }
 
+.graphic {
+  .interactive-credit {
+    padding: 10px 0;
+  }
+  .entry.padded {
+    padding-top: 10px;
+  }
+}
+
 .float-img {
     max-width: 420px;
     img {
@@ -487,9 +496,6 @@ header {
       img {
         width: 100%;
       }
-    }
-    .interactive-credit {
-      padding: 0;
     }
 
     @media (max-width: 861px){
@@ -592,12 +598,18 @@ header {
   .fish-container {
     margin: auto;
     .flex(0 0 18%);
+    @media @mobile {
+      .flex(0 0 19.5%);
+    }
   }
   .fish {
     clear: both;
-    opacity: 0.8;
+    // opacity: 0.8;
     cursor: pointer;
     margin: 10px;
+    @media @mobile {
+      margin: 1px;
+    }
     display: inline-block;
     img {
       width: 100%;
@@ -629,6 +641,10 @@ header {
   padding: 50px;
   @media @mobile {
     padding: 20px;
+  }
+  .hed {
+    padding-top: 0;
+    margin-top: 0;
   }
 }
 
@@ -791,5 +807,18 @@ header {
   @media @mobile {
     width: 95%;
     padding: 0 10px;
+  }
+}
+
+.insert-text {
+  color: red;
+  font-family: @bold-graphics;
+  font-size: 40px;
+  text-align: center;
+  padding: 50px;
+  width: 900px;
+  margin: auto;
+  @media @mobile {
+    width: 90%;
   }
 }
