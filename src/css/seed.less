@@ -511,6 +511,9 @@ header {
   }
   &.kelp {
     max-width: 500px;
+    @media @mobile {
+      width: 90%;
+    }
   }
 
   .caption{
@@ -888,14 +891,32 @@ header {
   // background-color: lighten(@gray-blue,55%);
   border-top: 3px solid lighten(@gray-blue, 10%);
   border-bottom: 3px solid lighten(@gray-blue, 10%);
-  @media @mobile {
-    padding-top: 20px;
-    border-top: 3px solid lighten(@gray-blue, 10%);
-    border-bottom: 3px solid lighten(@gray-blue, 10%);
-  }
   @media @tablet {
     width: 100%;
     margin: 50px 0 !important;
+  }
+  @media @mobile {
+    padding-top: 20px;
+    border: none;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+}
+
+.mobile-divider {
+  display: none;
+  @media @mobile {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    border-top: 2px solid lighten(@gray-blue, 10%);
+    border-bottom: 2px solid lighten(@gray-blue, 10%);
+    &.top {
+      margin-top: 40px;
+    }
+    &.bottom {
+      margin-bottom: 40px;
+    }
   }
 }
 
