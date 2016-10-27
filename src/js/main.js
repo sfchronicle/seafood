@@ -10,6 +10,7 @@ window.addEventListener("orientationchange", function() {
 
 var fish_template = dot.compile(require("../partials/_fish_info.html"));
 document.querySelector(".fish-info").innerHTML = fish_template(fishData["salmon"]);
+console.log(fishData["salmon"]);
 
 var fishlinks = document.querySelector(".fish-wrapper");
 var selected = document.querySelector(".active-fish");
@@ -17,36 +18,55 @@ var selected = document.querySelector(".active-fish");
 fishlinks.addEventListener("click", function(e) {
     var item = closest(e.target, (".fish-container"));
     if (!item) return;
+
+    // finding the last active image
     var previously = selected.querySelector(".fish-container");
-    var previousImage = previously.querySelector(".fish");
+    var previousLayer = selected.querySelector(".fish-layer");
+    var previousImage = previousLayer.querySelector(".fish");
     var previousImageIMG = previousImage.querySelector("img");
     var found = previousImageIMG.src.match("graphics/");
     var newIMG = previousImageIMG.src.substring(found.index+9,previousImageIMG.src.length);
+
+    // replacing the last active image with a white version
     if (newIMG.substring(0,5) != "white") {
       var img = document.createElement("img");
       img.src = "./assets/graphics/white"+newIMG;
       previousImage.replaceChild(img, previousImageIMG);
     }
-    var image = item.querySelector(".fish");
+
+    // finding the image that the reader clicked on
+    var imageLayer = item.querySelector(".fish-layer");
+    var image = imageLayer.querySelector(".fish");
     var imageIMG = image.querySelector("img");
     var found = imageIMG.src.match("graphics/");
     var bigimage = imageIMG.src.substring(found.index+9,imageIMG.src.length);
+
+    // replacing that image with a color image if it's not already one
     if (bigimage.substring(0,5) == "white") {
       var img = document.createElement("img");
       img.src = "./assets/graphics/" + bigimage.substring(5,bigimage.length);
       image.replaceChild(img, imageIMG);
     }
+
+    // replacing the various elements and adding appropriate classes
     flip(image, function() {
       selected.removeChild(previously);
       previously.classList.add("wiggle-even");
+      previousLayer.classList.add("faded");
+      console.log(previousLayer.classList);
+      imageLayer.classList.add("faded");
+      console.log(imageLayer.classList);
       fishlinks.appendChild(previously);
       fishlinks.removeChild(item);
       previously.classList.add("wiggle");
-
       selected.appendChild(item);
       item.classList.remove("wiggle-even");
       item.classList.remove("wiggle-odd");
       document.querySelector(".fish-info").innerHTML = fish_template(fishData[item.id]);
+      previousLayer.classList.remove("faded");
+      imageLayer.classList.remove("faded");
+      console.log(previousLayer.classList);
+      console.log(imageLayer.classList);
     });
 }, false);
 

@@ -11,9 +11,9 @@
 
     <script src="http://projects.sfchronicle.com/shared/js/jquery.min.js"></script>
 
-    <script type="text/javascript" src="http://treg.hearstnp.com/treg.js"></script>
+    <!-- <script type="text/javascript" src="http://treg.hearstnp.com/treg.js"></script>
     <script type="text/javascript" src="http://www.sfchronicle.com/js/hdn/omniture/syncronex.js"></script>
-    <script type="text/javascript" src="https://syncaccess-hst-sfc.syncronex.com/hst/sfc/api/scripts/syncwall"></script>
+    <script type="text/javascript" src="https://syncaccess-hst-sfc.syncronex.com/hst/sfc/api/scripts/syncwall"></script> -->
 
     <%= t.include("partials/_head.html") %>
     <%= t.include("partials/_analytics.html") %>
@@ -71,25 +71,37 @@
         <div id="stick-here-fish"></div>
         <div class="fish-wrapper" id="stick-me-fish">
           <div class="fish-container wiggle-even" id="crab">
+            <div class="fish-layer">
               <div class="fish even active"><img src="./assets/graphics/crab_GR.png"></div>
+            </div>
           </div>
           <div class="fish-container wiggle-odd" id="oyster">
+            <div class="fish-layer">
               <div class="fish even"><img src="./assets/graphics/oyster_GR.png"></div>
+            </div>
           </div>
           <div class="fish-container wiggle-even" id="sardines">
+            <div class="fish-layer">
               <div class="fish odd"><img src="./assets/graphics/sardines_GR.png"></div>
+            </div>
           </div>
           <div class="fish-container wiggle-odd" id="seaurchin">
+            <div class="fish-layer">
               <div class="fish even"><img src="./assets/graphics/seaurchin_GR.png"></div>
+            </div>
           </div>
           <div class="fish-container wiggle-even" id="squid">
+            <div class="fish-layer">
               <div class="fish odd"><img src="./assets/graphics/squid_GR.png"></div>
+            </div>
           </div>
         </div>
         <div id="stick-ph-fish"></div>
         <div class="active-fish">
           <div class="fish-container" id="salmon">
+            <div class="fish-layer">
               <div class="fish odd"><img src="./assets/graphics/salmon_GR.png"></div>
+            </div>
           </div>
         </div>
         <div class="fish-info"></div>
@@ -164,14 +176,18 @@
 
       <p>“There’s just miles of squid out there,” he said at the time.</p>
 
-      <div class="inline-img kelp">
-          <img src="./assets/graphics/kelpbase.png">
-          <img class="kelp-overlay" id="kelp-overlay">
-      </div>
-      <div class="kelp interactive-credit">
-        <div class="entry">Graphic artist: John Blanchard  &bull; <a href="mailto:jblanchard@sfchronicle.com">jblanchard@sfchronicle.com</a></div>
-        <div class="entry">Developer: Emma O'Neill  &bull; <a href="mailto:eoneill@sfchronicle.com">eoneill@sfchronicle.com</a>   &bull; <a href = "https://twitter.com/emmaruthoneill" target="_blank">@emmaruthoneill</a></div>
-        <div class="entry">Source: <a href="http://www.google.com/" target="_blank">INSERT SOURCE HERE!!!!!</a></div>
+      <div class="outer kelp-outer">
+        <div class="hed">Kelp loss in Northern California</div>
+        <div class="chatter">Based on aerial photos taken at different sites on the North Coast, these images show a dramatic decrease in kelp forests, which sustain red urchin, abalone and thousands of other species. While 2008 was a good kelp year, the images from 2014 show effects of the Warm Blob, warm water conditions that caused a severe reduction in kelp.</div>
+        <div class="inline-img kelp">
+            <img src="./assets/graphics/kelpbase.png">
+            <img class="kelp-overlay" id="kelp-overlay">
+        </div>
+        <div class="interactive-credit">
+          <div class="entry">Graphic artist: John Blanchard  &bull; <a href="mailto:jblanchard@sfchronicle.com">jblanchard@sfchronicle.com</a></div>
+          <div class="entry">Developer: Emma O'Neill  &bull; <a href="mailto:eoneill@sfchronicle.com">eoneill@sfchronicle.com</a>   &bull; <a href = "https://twitter.com/emmaruthoneill" target="_blank">@emmaruthoneill</a></div>
+          <div class="entry">Source: <a href="https://www.wildlife.ca.gov/" target="_blank">Source: California Department of Fish and Wildlife</a></div>
+        </div>
       </div>
 
       <p>The California coast is part of what is normally one of the most productive fisheries in the world. Winds that run southward down the West Coast push surface water offshore, allowing deeper, nutrient-rich water to come up and feed seaweed and phytoplankton. That sets the food chain in motion for zooplankton, including krill, which in turn nourish an incredibly diverse ecosystem of marine mammals and larger fish like the chinook.</p>
