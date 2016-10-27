@@ -154,12 +154,12 @@ var slideshow_template = dot.compile(require("../partials/_slideshow.html"));
 
 var photo1 = {
   url: "http://ww2.hdnux.com/photos/54/11/64/11622639/3/2000x1000.jpg",
-  caption: "Hog Island Oyster Co. employee Hector Molinero (foreground) watches as Mejia heads into the water to collect bags of oysters during harvesting in Marshall on Oct. 12. ",
+  caption: "Hog Island Oyster Co. employee Hector Molinero (foreground) watches as Wilber Mejia heads into the water to collect bags of oysters during harvesting in Marshall on Oct. 12. ",
   credit: "Gabrielle Lurie"
 };
 var photo2 = {
   url: "http://ww2.hdnux.com/photos/54/11/64/11622618/3/2000x1000.jpg",
-  caption: "Mejia sorts oysters at the Hog Island Oyster Co. headquarters in Marshall. ",
+  caption: "Wilber Mejia sorts oysters at the Hog Island Oyster Co. headquarters in Marshall. ",
   credit: "Gabrielle Lurie"
 };
 var photo3 = {
@@ -169,7 +169,7 @@ var photo3 = {
 };
 var photo4 = {
   url: "http://ww2.hdnux.com/photos/54/11/64/11622727/3/2000x1000.jpg",
-  caption: "Mejia throws a rope over a stack of oysters to secure them to a truck before they’re transported back to the Hog Island headquarters on Oct. 12. ",
+  caption: "Wilber Mejia throws a rope over a stack of oysters to secure them to a truck before they’re transported back to the Hog Island headquarters on Oct. 12. ",
   credit: "Gabrielle Lurie"
 };
 var photo5 = {
@@ -179,7 +179,7 @@ var photo5 = {
 };
 var photo6 = {
   url: "http://ww2.hdnux.com/photos/54/11/64/11622649/3/2000x1000.jpg",
-  caption: "Mejia prepares to retrieve a bag of oysters during a Tomales Bay harvest on Oct. 12. ",
+  caption: "Wilber Mejia prepares to retrieve a bag of oysters during a Tomales Bay harvest on Oct. 12. ",
   credit: "Gabrielle Lurie"
 };
 
