@@ -65,6 +65,31 @@ hr{
     font-family: @block-graphics;
     font-size: 16px;
   }
+  .inline-img {
+    .interactive-credit {
+      padding-top: 0;
+    }
+    &.Salmon {
+      background-color: lighten(@gray-blue, 10%);
+      max-width: 600px;
+      padding: 5px;
+      .interactive-credit {
+        display: none;
+      }
+    }
+    &.Squid {
+      background-color: lighten(@gray-blue, 10%);
+      padding: 5px;
+      max-width: 430px;
+      .interactive-credit {
+        color: white !important;
+        a {
+          color: white !important;
+        }
+      }
+    }
+    margin-bottom: 0;
+  }
 }
 
 .max{
@@ -113,7 +138,7 @@ li {
 
 // interactives styles ------------------------------------
 
-.hed {
+.hed, .info-hed {
   font-weight: bold;
   font-size: 20px;
   margin-top: 10px;
@@ -232,6 +257,7 @@ footer {
 .title-container {
   background-image: url("http://ww2.hdnux.com/photos/54/11/64/11622634/3/2000x1000.jpg");
   background-position: bottom;
+  background-repeat: no-repeat;
 
   &.top-margin {
     margin-top: 3.5em;
@@ -295,11 +321,12 @@ footer {
   color: @gray-blue;
   font-family: @banner;
   font-size: 18px;
-  text-transform: uppercase;
+  // text-transform: uppercase;
   @media @mobile {
     font-size: 13px;
     vertical-align: text-top;
   }
+  text-transform: none;
 }
 
 .specialhead {
@@ -423,6 +450,7 @@ header {
   &.landing {
     padding-left: 10px;
     margin-bottom: 2.5em;
+    max-width: 1500px;
   }
 }
 
@@ -453,11 +481,32 @@ header {
   }
 }
 
+.kelp {
+  position: relative;
+  // opacity: 0.5;
+  .kelp-overlay {
+    opacity: 1.0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  margin-bottom: 0 !important;
+}
+.kelp.interactive-credit {
+  max-width: 500px;
+  margin: auto;
+  padding-top: 5px;
+  padding-left: 0px;
+}
+
 .inline-img {
   max-width: 730px;
   margin: 2em auto;
   img {
     width: 100%;
+  }
+  &.kelp {
+    max-width: 500px;
   }
 
   .caption{
@@ -466,6 +515,40 @@ header {
       @media @text-width{
         padding:0 10px;
       }
+  }
+  &.mobile {
+    max-width: 200px;
+    display: none;
+    .interactive-credit {
+      padding-left: 0;
+    }
+    @media @mobile {
+      display: block;
+    }
+  }
+}
+
+.inline-img-wide {
+  max-width: 900px;
+  margin: 2em auto;
+  img {
+    width: 100%;
+  }
+  .interactive-credit {
+    padding: 5px 0;
+  }
+
+  .caption{
+    padding:0;
+
+      @media @text-width{
+        padding:0 10px;
+      }
+  }
+  @media @mobile {
+    &.desktop {
+      display: none;
+    }
   }
 }
 
@@ -617,7 +700,7 @@ header {
   justify-content: center;
   .fish-container {
     margin: auto;
-    .flex(0 0 18%);
+    .flex(0 0 15%);
     @media @mobile {
       .flex(0 0 19.5%);
     }
@@ -662,14 +745,22 @@ header {
   @media @mobile {
     padding: 20px;
   }
-  .hed {
+  .info-hed {
     padding-top: 0;
     margin-top: 0;
+  }
+  .hed {
+    &.padded {
+      padding-top:50px;
+    }
+  }
+  .interactive-credit {
+    padding-left: 0;
   }
 }
 
 .fish-container, .active-fish, .fish {
-  transition: all ease margin-left 4s;
+  transition: all ease margin-left 10s;
 }
 
 // .active-fish {
@@ -747,9 +838,10 @@ header {
   @media @mobile {
     font-size: 14px;
   }
-  background-color: lighten(@sea-blue,7%);
+  // background-color: lighten(@sea-blue,7%);
+  background-color: lighten(@gray-blue,55%);
   font-family: @block-graphics;
-  .hed {
+  .info-hed {
     font-family: @bold-graphics;
     // font-size: 25px;
     padding-bottom: 20px;
@@ -777,7 +869,8 @@ header {
 }
 
 .outer {
-  background-color: lighten(@sea-blue,7%);
+  // background-color: lighten(@sea-blue,7%);
+  background-color: lighten(@gray-blue,55%);
   @media @mobile {
     padding-top: 20px;
   }
@@ -794,7 +887,7 @@ header {
    z-index: 0;
    max-width: 900px;
    margin: auto;
-   width: inherit;
+   width: 100%;
    left: 0;
    right: 0;
    border-top: 0 !important;
@@ -818,7 +911,7 @@ header {
 .deck {
   font-size: 23px;
   text-align: center;
-  width: 800px;
+  max-width: 700px;
   margin: auto;
   @media @tablet {
     width: 90%;
@@ -923,5 +1016,12 @@ header {
 .scroll-left{
   &.first {
     display: none;
+  }
+}
+
+#special-link {
+  visibility: hidden;
+  &.link-active {
+    visibility: visible;
   }
 }

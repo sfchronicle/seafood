@@ -1,7 +1,21 @@
-<div class="hed"><%= data.name %></div>
+<div class="info-hed"><%= data.name %></div>
 <div class="sub-hed">The issues:</div>
 <div class="graphic-permit"><%= data.issues %></div>
 <div class="sub-hed">Commercial season:</div>
 <div class="season"><%= data.season %></div>
 <hr>
 <div class="worst-case"><%= data.text %></div>
+<% if (data.graphic_hed) { %>
+  <div class="hed padded"><%= data.graphic_hed %></div>
+<% } %>
+<% if (data.graphic_chatter) { %>
+  <div class="chatter"><%= data.graphic_chatter %></div>
+<% } %>
+<% if (data.graphic) { %>
+  <div class="inline-img <%= data.name %>">
+    <img src= <%= data.graphic %> >
+    <div class="interactive-credit">
+      <div class="entry">John Blanchard  &bull; <a href="mailto:jblanchard@sfchronicle.com">jblanchard@sfchronicle.com</a></div>
+    </div>
+  </div>
+<% } %>

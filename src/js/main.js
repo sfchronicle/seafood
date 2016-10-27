@@ -9,7 +9,7 @@ window.addEventListener("orientationchange", function() {
 }, false);
 
 var fish_template = dot.compile(require("../partials/_fish_info.html"));
-document.querySelector(".fish-info").innerHTML = fish_template(fishData["crab"]);
+document.querySelector(".fish-info").innerHTML = fish_template(fishData["salmon"]);
 
 var fishlinks = document.querySelector(".fish-wrapper");
 var selected = document.querySelector(".active-fish");
@@ -20,10 +20,8 @@ fishlinks.addEventListener("click", function(e) {
     var previously = selected.querySelector(".fish-container");
     var previousImage = previously.querySelector(".fish");
     var previousImageIMG = previousImage.querySelector("img");
-    console.log(previousImageIMG.src);
-    var newIMG = previousImageIMG.src.split("/")[7];
-    console.log(newIMG);
-    console.log(newIMG.substring(0,5));
+    var found = previousImageIMG.src.match("graphics/");
+    var newIMG = previousImageIMG.src.substring(found.index+9,previousImageIMG.src.length);
     if (newIMG.substring(0,5) != "white") {
       var img = document.createElement("img");
       img.src = "./assets/graphics/white"+newIMG;
@@ -31,8 +29,8 @@ fishlinks.addEventListener("click", function(e) {
     }
     var image = item.querySelector(".fish");
     var imageIMG = image.querySelector("img");
-    var bigimage = imageIMG.src.split("/")[7];
-    console.log(bigimage);
+    var found = imageIMG.src.match("graphics/");
+    var bigimage = imageIMG.src.substring(found.index+9,imageIMG.src.length);
     if (bigimage.substring(0,5) == "white") {
       var img = document.createElement("img");
       img.src = "./assets/graphics/" + bigimage.substring(5,bigimage.length);
@@ -50,7 +48,6 @@ fishlinks.addEventListener("click", function(e) {
       item.classList.remove("wiggle-odd");
       document.querySelector(".fish-info").innerHTML = fish_template(fishData[item.id]);
     });
-    // if (selected.getBoundingClientRect().top < 0) scroll(selected);
 }, false);
 
 // document.getElementById('stick-me-fish').style.height = document.getElementById('stick-ph-fish').style.height;
@@ -74,6 +71,12 @@ function activate() {
   } else {
     sticker.classList.remove('fixed-fish');
     sticker_ph.style.display = 'none'; // removes placeholder
+  }
+  var title_top = document.getElementById('title-marker').getBoundingClientRect().top + window_top;
+  if (window_top > title_top) {
+    document.getElementById('special-link').classList.add("link-active");
+  } else {
+    document.getElementById('special-link').classList.remove("link-active");
   }
 }
 
@@ -200,3 +203,22 @@ document.getElementById("scroll-left-gallery").addEventListener("click", functio
     $("#scroll-left-gallery").removeClass("first");
   };
 });
+
+// kelp animation ---------------------------------------------------------------
+
+var overlay_images = ["kelp2008.png", "kelp2014.png"];
+
+var overlay = document.getElementById('kelp-overlay');
+var elem = document.createElement("img");
+overlay.appendChild(elem);
+var i = 0;
+var looping = true;
+var loop = null;
+
+var tick = function() {
+  overlay.src = "./assets/graphics/"+overlay_images[i];
+  i = (i + 1) % overlay_images.length;
+  loop = setTimeout(tick, i == 0 ? 1200 : 1000);
+};
+
+tick();
