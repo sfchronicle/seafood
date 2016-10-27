@@ -53,9 +53,7 @@ fishlinks.addEventListener("click", function(e) {
       selected.removeChild(previously);
       previously.classList.add("wiggle-even");
       previousLayer.classList.add("faded");
-      console.log(previousLayer.classList);
-      imageLayer.classList.add("faded");
-      console.log(imageLayer.classList);
+      // imageLayer.classList.add("faded");
       fishlinks.appendChild(previously);
       fishlinks.removeChild(item);
       previously.classList.add("wiggle");
@@ -63,10 +61,8 @@ fishlinks.addEventListener("click", function(e) {
       item.classList.remove("wiggle-even");
       item.classList.remove("wiggle-odd");
       document.querySelector(".fish-info").innerHTML = fish_template(fishData[item.id]);
-      previousLayer.classList.remove("faded");
-      imageLayer.classList.remove("faded");
-      console.log(previousLayer.classList);
-      console.log(imageLayer.classList);
+      setTimeout(() => previousLayer.classList.remove("faded"), 100);
+      // setTimeout(() => imageLayer.classList.remove("faded"), 100);
     });
 }, false);
 
@@ -238,7 +234,7 @@ var loop = null;
 var tick = function() {
   overlay.src = "./assets/graphics/"+overlay_images[i];
   i = (i + 1) % overlay_images.length;
-  loop = setTimeout(tick, i == 0 ? 1200 : 1000);
+  loop = setTimeout(tick, i == 0 ? 1500 : 1000);
 };
 
 tick();
