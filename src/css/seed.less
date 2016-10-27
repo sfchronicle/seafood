@@ -756,6 +756,9 @@ header {
   .hed {
     &.padded {
       padding-top:50px;
+      @media @mobile {
+        padding-top: 20px;
+      }
     }
   }
   .interactive-credit {
@@ -883,9 +886,12 @@ header {
 .outer {
   // background-color: lighten(@sea-blue,7%);
   // background-color: lighten(@gray-blue,55%);
-  border: 2px solid lighten(@gray-blue, 10%);
+  border-top: 3px solid lighten(@gray-blue, 10%);
+  border-bottom: 3px solid lighten(@gray-blue, 10%);
   @media @mobile {
     padding-top: 20px;
+    border-top: 3px solid lighten(@gray-blue, 10%);
+    border-bottom: 3px solid lighten(@gray-blue, 10%);
   }
   @media @tablet {
     width: 100%;
