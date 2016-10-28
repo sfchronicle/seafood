@@ -222,7 +222,7 @@ document.getElementById("scroll-left-gallery").addEventListener("click", functio
 
 // kelp animation ---------------------------------------------------------------
 
-var overlay_images = ["kelp2008.png", "kelp2014.png"];
+var overlay_images = ["kelp2008.png?", "kelp2014.png?"];
 
 var overlay = document.getElementById('kelp-overlay');
 var elem = document.createElement("img");
